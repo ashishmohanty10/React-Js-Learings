@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Factory function
+
+        const personal = (weight,age) => {
+            return {
+                weight : weight,
+                age : age
+            }
+            
+        }
+
+        const data1 = personal(76,25)
+        console.log(data1)
+
+        // Constructor Function 
+
+         function personalData(weight,age){
+            this.weight  = weight,
+            this.age = age
+        }
+
+        const data2 = new personalData(45,20)
+        console.log(data2)
+
+        // Example of constructor fucntion
+
+        function Enemy(speed,age){
+            this.speed = speed,
+            this.age = age
+        }
+
+        const enemies = []
+
+        for(let i = 0 ; i< 100; i++){
+            enemies.push(Math.floor(Math.random()*100),Math.floor(Math.random()*50))
+        }
+
+        console.log(enemies)
+    </script>
+</body>
+</html>

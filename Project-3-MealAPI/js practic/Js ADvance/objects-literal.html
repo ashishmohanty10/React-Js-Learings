@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        const person = {
+            name : "Ashish",
+            roll : "13",
+            college   : "KIIT"
+        }
+
+        console.log(person)
+        console.log(person.name)
+        console.log(person.college)
+
+
+        // old style
+
+        let name = "Ashish"
+        let course = "B.Tech"
+
+        const obj = {
+            name  : name,
+            course : course,
+        }
+
+        console.log(obj)
+
+        // ES6  Version
+
+        let names = "Ashish"
+        let roll = 13
+
+        const credential = {
+            name,
+            course
+        }
+
+        console.log(credential)
+
+        // another eg:
+
+        let n  = "name"
+
+        var objt = {
+            [n]: "Ashish",
+            course : "B.tech"
+        }
+
+        console.log(objt)
+
+        let nam = "Ashish"
+        let cour = "B.Tech"
+
+        const obje = {
+            name  : name,
+            course : course,
+        }
+        obje.gender = "Male"
+        console.log(obje)
+    </script>
+</body>
+</html>

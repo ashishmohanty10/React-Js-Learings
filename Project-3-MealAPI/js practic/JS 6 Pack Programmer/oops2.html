@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        //Prototype Methods
+        class hello{
+            message(){
+                console.log("Hello everyone")
+            }
+            sorry(){
+                console.log("Hello everyone")
+            }
+        }
+
+        let a  = new hello();
+        a.message()
+        a.sorry()
+
+        //Constructot Methods
+
+        class personalData{
+
+            
+            constructor(weight,height){
+                this.weight = weight
+                this.height = height
+            }
+
+        }
+
+        class newData extends personalData{
+
+            constructor(weight,height,age){
+                super(weight,height,age)
+                this.age = age
+            }
+        }
+
+
+
+        const data = new personalData(45,175,20)
+        const data2 = new newData(45,175,20)
+        console.log(data)
+        console.log(data2)
+
+
+
+        class employee{
+            constructor(name){
+                this.name = name
+                console.log(`Constructor : ${this.name}`)
+            }
+        }
+
+        class manager extends employee{
+            constructor(name,salary){
+                super(name,salary)
+                this.salary = salary
+            }
+        }
+        let b = new manager("Ashish Mohanty",45000)
+        console.log(b)
+
+
+    </script>
+</body>
+</html>

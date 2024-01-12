@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Earlier way of assign values of each array
+
+        let user1 = ["Ashish",21]
+
+        let name = user1[0]
+        let age = user1[1]
+
+        console.log(name,age)
+
+        // new ES6 way 
+        let user2 = ["Ashish",21]
+
+        let [nam,ag] = user2 //destructureing
+
+        console.log(name,age)
+
+
+        function user(){
+            
+            return ["Ashish", 21, "Kolkata"]
+        }
+
+        let [names,ages,city] = user()
+
+        console.log(names,ages,city)
+    </script>
+</body>
+</html>

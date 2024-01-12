@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // function printTheValue(a,b,c){
+        //     let result = (a*10 + b*10 + c*10)/10
+        //     console.log(result)
+        // }
+
+        // function intro(name,channel){
+        //     console.log(`Hi my name is ${name}.My channel name is ${channel}`)
+
+        //     console.log(printTheValue(1,2,3))
+        // }
+
+        function total(arr){
+            let sum = 0
+
+            for(let i = 0; i < arr.length; ++i){
+                sum += arr[i];
+            }
+            return sum
+        }
+
+        const arr = [1,2,3,4,5]
+        console.log(total(arr))
+
+    function sumArray(numbers) {
+        let sum = 0; // Initialize the sum to 0
+        for (let number of numbers) {
+            // Iterate through the array
+            sum += number; // Add each number to the sum
+        }
+        return sum; // Return the final sum
+    }
+
+        const numbers = [1, 2, 3, 4, 5];
+        const result = sumArray(numbers);
+
+        console.log(result); // Outputs 15 (1 + 2 + 3 + 4 + 5)
+
+    </script>
+</body>
+</html>

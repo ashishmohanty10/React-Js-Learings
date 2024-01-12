@@ -1,0 +1,10 @@
+.hello{
+    background-color: red;
+    display: inline;
+    padding: 5px 5px;
+    color: white;
+}
+
+.btn{
+    background-color: yellow;
+}

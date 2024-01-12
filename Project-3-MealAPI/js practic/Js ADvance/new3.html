@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="addwork" id="inputTask">
+    <button id="addWork">Add Work</button>
+
+    <ul id="taskList"></ul>
+
+
+    <script>
+
+        const inputTask = document.querySelector("#inputTask")
+        const addWork = document.querySelector("#addWork")
+        const taskList = document.querySelector("#taskList")
+
+
+        addWork.addEventListener("click",()=>{
+
+            const task = inputTask.value
+
+            if(inputTask){
+                const newList = document.createElement("li")
+
+                newList.textContent = task
+                taskList.appendChild(newList)
+                inputTask.value = ""
+            }
+        })
+
+        taskList.addEventListener("click",(e)=>{
+            if(e.target.tagName === "LI"){
+                e.target.remove()
+            }
+        })
+    </script>
+</body>
+</html>

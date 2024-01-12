@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // class myClass{
+        //     #a ;
+        //     #b ;
+        //     constructor(value1,value2){
+        //         this.#a = value1
+        //         this.#b = value2
+        //     }
+
+        //     set setA(a){
+        //         this.#a = a
+        //     }
+
+        //     get getData(){
+        //         return this.#b
+        //     }
+        //     print(){
+        //         console.log("I am printing",this.#b)
+        //     }
+        // }
+        // const obj1 = new myClass(20,35)
+        // obj1.setA = 23
+        // console.log(obj1)
+
+        // const obj2 = new Date()
+        // console.log(obj2)
+
+
+        // class Electronics{
+        //     #input;
+        //     #output;
+        //     #name;
+        //     constructor(input,output,name){
+        //         this.#input = input;
+        //         this.#output = output;
+        //         this.#name = name;
+        //     }
+        //     print(){
+        //         console.log(this.#name);
+        //     }
+        // }
+
+        // class Charger extends Electronics{
+        //     #plugType;
+
+        //     constructor(input,output,name,plugType){
+        //         super(input,output,plugType)
+        //         this.#plugType = plugType;
+        //     }
+        // }
+        // const hpCharger = new Electronics(213,232,"hp Charger","European")
+        // const hardDisk = new Electronics(200,250,"hp")
+        // hpCharger.print();
+
+        
+        class pen{
+            #color;
+            #company;
+            #price;
+
+            constructor(color,company,price){
+                this.#color = color
+                this.#company = company
+                this.#price = price
+            }
+
+            print(){
+                console.log(this)
+            }
+        }
+        
+        class newPen extends pen{
+            #extra;
+
+            constructor(color,company,price,extra){
+                super(color,company,price,extra)
+                this.#extra = extra
+            }
+
+            get extraFeatures(){
+                console.log(this.#extra)
+            }
+        }
+        
+        const pencil1 = new pen("black","cello",10)
+        const pencil2 = new newPen("black","cello",10,"eraser")
+        pencil1.print();
+        pencil2.print();
+        pencil2.extraFeatures;
+
+        // function personalData(weight,age){
+        //     this.weight = weight,
+        //     this.age = age
+        // }
+
+        // const data = new personalData(65,35)
+        // console.log(data)
+
+        // function personalData(weight,age) {
+        //    return {
+        //     weight : weight,
+        //     age : age
+        //    }
+        // }
+
+        // const data = personalData(65,35)
+        // console.log(data)
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple To-Do List</title>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button id="addTask">Add Task</button>
+  <ul id="taskList">
+  </ul>
+
+  <script>
+    // Get references to HTML elements
+    const taskInput = document.getElementById("taskInput");
+    const addTaskButton = document.getElementById("addTask");
+    const taskList = document.getElementById("taskList");
+
+    // Add a task to the list
+    addTaskButton.addEventListener("click", ()=> {
+      const taskText = taskInput.value;
+
+      if (taskText) {
+        const taskItem = document.createElement("li");
+        taskItem.textContent = taskText;
+        taskList.appendChild(taskItem);
+        taskInput.value = ""; // Clear the input field after adding a task
+      }
+    });
+
+    // Remove a task when clicked
+    taskList.addEventListener("click", function(e) {
+      if (e.target.tagName === "LI") {
+        e.target.remove();
+      }
+    });
+  </script>
+</body>
+</html>

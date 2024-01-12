@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h2{
+        background-color: bisque;
+        text-align: center;
+        color:black;
+    }
+</style>
+<body>
+    
+    <h2>Get Your Lucky Colour</h2>
+
+    <select id="zodiac">
+        <option value="violet">Violet</option>
+        <option value="indego">Indego</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="orange">Orange</option>
+        <option value="red">Red</option>
+    </select>
+
+    <button id="btn">Get color</button>
+
+
+    <script>
+        const zodiac = document.getElementById("zodiac")
+        const btn = document.getElementById("btn")
+        const body = document.body
+        btn.addEventListener("click",()=>{
+            switch (zodiac.value) {
+                case "violet":
+                    body.style.backgroundColor = " #9400D3"
+                    break;
+                case "indego":
+                    body.style.backgroundColor = "#4B0082"
+                    break;
+
+                    case "blue":
+                    body.style.backgroundColor = "#0000FF"
+                    break;
+
+                    case "green":
+                    body.style.backgroundColor = "#00FF00"
+                    break;
+
+                    case "yellow":
+                    body.style.backgroundColor = "#FFFF00"
+                    break;
+
+                    case "orange":
+                        body.style.backgroundColor = "#FF7F00"
+                        break;
+
+                    case "red":
+                        body.style.backgroundColor = "#FF0000"
+                        break;
+                default:
+                    break;
+            }
+        })
+
+    </script>
+</body>
+</html>

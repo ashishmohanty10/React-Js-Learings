@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        let arr1 = [1,2,3,4,6,5]
+        let arr2 = ["ashish","mohanty"]
+
+        console.log(arr1)
+        console.log(arr2)
+
+        let arr = [1,2,3,4,5,6,8,9,0,11]
+
+        arr.push(7)
+        console.log(arr)
+        arr.pop(7)
+        console.log(arr)
+        arr.shift()
+        console.log(arr)
+        console.log(arr.length)
+
+        arr.splice(2,3)
+        console.log(arr)
+
+        let newArr = arr.slice(1,4)
+        console.log(newArr)
+        console.log(arr)
+
+
+        // Loops with array
+
+        let secArr = []
+
+        for (let i = 0 ; i< 100 ;i++){
+            let thirdArr = secArr.push("ashish")
+        }
+
+        console.log(secArr)
+
+
+        // Objects
+        
+        const myobj = {
+            name: "ashish",
+            surname:"mohanty",
+            income:0,
+            gender: "male"
+        }
+
+        console.log(myobj)
+    </script>
+</body>
+</html>

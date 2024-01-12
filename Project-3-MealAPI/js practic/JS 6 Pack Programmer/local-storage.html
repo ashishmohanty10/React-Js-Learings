@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Enter Your Name">
+    <button id="myBtn">CLick</button>
+    <button id="myBtn2">Remove</button>
+
+
+
+    <script>
+        const input = document.getElementById("myInput")
+        const btn = document.getElementById("myBtn")
+        const removeButton = document.getElementById("myBtn2")
+
+        const btnClicked = () =>{
+            sessionStorage.setItem("key1",input.value)
+        }
+
+        btn.addEventListener("click",btnClicked)
+
+        if(sessionStorage.getItem("key1")){
+            alert(sessionStorage.getItem("key1"))
+        }
+
+        removeButton.addEventListener("click",()=>{
+            sessionStorage.removeItem("key1")
+        })
+    </script>
+</body>
+</html>

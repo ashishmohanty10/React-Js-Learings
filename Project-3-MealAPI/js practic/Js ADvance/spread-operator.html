@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function sums(args){
+
+            let sum = 0;
+            for (let i in args){
+                sum += args[i]
+            }
+
+            return sum;
+        }
+        let result = [20,30,40,50]
+        console.log(sums(result))
+
+
+        function sum(name,...args){
+
+            console.log(arguments)
+            document.write(`hello ${name} ur marks is:`)
+            let sum = 0
+            for (let i in args){
+                sum += args[i]
+            }
+
+            document.write(sum)
+        }
+
+        let arr = [20,30,40,50,60]
+
+        sum("Ashish",...arr)
+    </script>
+</body>
+</html>

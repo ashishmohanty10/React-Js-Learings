@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        function calculator(a,b,operation){
+            return operation(a,b)
+        }
+
+        function add(a,b){
+            return a+b
+        }
+
+        function mul(a,b){
+            return a*b
+        }
+        
+        const addResult = calculator(30,40,add) //callback
+        const mulResult = calculator(30,40,mul)// sending referencce of mul function
+        console.log(addResult)
+        console.log(mulResult)
+
+
+        const arr = [1,2,3,4,5,6]
+
+
+        function calculation(arr = [],operation){
+            const result = []
+
+            for(let i = 0;i< arr.length; i++){
+                const element  = operation(arr[i])
+                result.push(element)
+            } 
+            console.log(result)
+        }
+
+        function multilpy(a){
+            return a*10
+        }
+        function div(a){
+            return a/10
+        }
+
+        const result = calculation(arr,multilpy)
+        const reResult = calculation(arr,div)
+
+
+
+
+
+        const gameList = []
+        const game = {}
+
+        const fetchData = (callback) =>{
+            setTimeout((callback) => {
+                gameList.push(
+                    {
+                        name: "game1",
+                        id: "kfwekm",
+                    },
+                    {
+                        name : "game2",
+                        id : "gameqlnelqnf2",
+                    },
+                    {
+                        name: "game3",
+                        id: "jwejfwejf",
+                    }
+                );
+                console.log("console log after fetching")
+                callback()
+                console.log(gameList)
+            }, 4000,callback);
+        };
+        
+        
+
+
+        const displayGame = ()=>{
+            setTimeout(() => {
+                for(let i = 0 ; i < gameList.length ; i++){
+                    const p = document.createElement("p")
+                    p.innerText = gameList[i].name
+                    document.body.append()
+                }
+                console.log("console log after displaying")
+            }, 1000);
+        }
+        fetchData(displayGame);
+
+        
+    </script>
+</body>
+</html>

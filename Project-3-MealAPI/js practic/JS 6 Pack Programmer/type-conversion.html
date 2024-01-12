@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="myHeading"></h1>
+    
+    <script>
+        let a = 50;
+
+        console.log(a)
+        // console.log(typeof String(a))
+        console.log(typeof a.toString())
+
+
+        let s = "My name is Ashish"
+
+        console.log(s.indexOf("Ashish"))
+        console.log(s.lastIndexOf("a"))
+        console.log(s.endsWith("Ashish"))
+        console.log(s.includes("Ashish"))
+        console.log(s.substring(0,4))
+        console.log(s.slice(0,4))
+        console.log(s.split(" "))
+        console.log(s.length)
+        console.log(s.toLocaleLowerCase())
+        console.log(s.toLocaleUpperCase())
+        console.log(s.substr(3,4))
+
+
+        let heading = document.getElementById("myHeading")
+
+        heading.innerText = s;
+        heading.style.backgroundColor = "red";
+        heading.style.color = "white"
+
+       
+    </script>
+</body>
+</html>

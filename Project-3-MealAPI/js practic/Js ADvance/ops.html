@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+
+// this is called procedural programming 👇
+        let baseSalary = 30000;
+        let overtime = 10;
+        let rate  = 20
+
+        function getWage(baseSalary,overtime,rate){
+            return baseSalary + (overtime*rate)
+        }
+
+// OOPS version of above program👇
+
+        let employee = {
+            baseSalary : 30000,
+            overtime : 10,
+            rate : 20,
+
+            getWage: function(){ 
+                return this.baseSalary + (this.overtime*this.rate)
+            }
+
+        }
+
+        employee.getWage() 
+
+
+
+        // Objects 
+
+         const RomanReigns = {
+            weight: 265,
+            height: 185,
+            quote:() =>{
+                console.log("Head of the table")
+            }
+         }
+
+        // Factory Function 👇
+         function wwweSuperstar(a,b,quote){
+            return {
+                weight: a,
+                height: b,
+                quote:() =>{
+                console.log(quote)
+            }
+         }
+        }
+
+         const romanReigns = wwweSuperstar(265,185,"yeah boi") // 👈Function call
+         const sethRolins = wwweSuperstar(225 , 185 , "burn it down")  // 👈Function call
+        
+        console.log(romanReigns) // 👈 printing it in console
+        console.log(sethRolins) //👈 printing it in console
+
+        // Constructor Fucntion 👇
+        function Star(weight,height){
+            
+            this.weight = weight,
+            this.height  = height
+
+        }
+
+        const romanreigns = new Star(265,185) //👈 Funtion call
+        console.log(romanreigns) // 👈 printing it in console
+
+        
+
+        // Example of constructor function
+
+        function Players(centuries,fifties){
+            this.centuries = centuries,
+            this.fifties = fifties
+        }
+
+        const Virat = new Players(48,70) // 👈 Function call
+        const ROhit = new Players(31,54)
+
+        console.log(Virat)
+        console.log(ROhit)
+
+
+        //  Another Example 👇
+
+        function Enemy(age,speed){
+            this.age = age,
+            this.speed = speed
+        }
+
+        const enemies = []
+
+        for(let i = 0; i < 100 ; ++i){
+            enemies.push(new Enemy (Math.floor(Math.random()*100),Math.floor(Math.random()*100)))
+        }
+
+        console.log(enemies)
+    </script>
+</body>
+</html>
